@@ -1,8 +1,18 @@
 !!!
-%html{:lang => "ja"}
+%html{:lang => 'ja'}
   %head
-    %meta(charaset="UTF-8")
-    %style(type='text/css' href='/css/main.css' media='screen')
-    %script(type='application/javascript' src='/application.js')
+    %meta(charaset='UTF-8')
+    %title sinatra start
+    %link(rel='stylesheet' href='/css/main.css')
   %body
-    %p hello!
+    %h1 Tasks!
+    #tasks
+
+    %script(type='text/template' id='task-template')
+      <%- title %>
+      %span.delete [x]
+
+    %script(type='application/javascript' src='/js/underscore.js')
+    %script(type='application/javascript' src='/js/jquery.js')
+    %script(type='application/javascript' src='/js/backbone-min.js')
+    %script(type='application/javascript' src='/js/main.js')
