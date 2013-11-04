@@ -1,5 +1,9 @@
 require 'sinatra'
 
 get '/' do
-  "hello world"
+  haml :index 
+end
+
+get '/css/main.css' do
+  scss :main
 end
